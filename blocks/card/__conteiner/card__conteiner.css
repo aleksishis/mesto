@@ -1,0 +1,7 @@
+.card__conteiner {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px 30px 20px;
+}
