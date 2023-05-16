@@ -4,28 +4,19 @@
   font-style: normal;
   background: #000000;
   max-width: 880px;
-  margin: 45px auto 60px auto;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 60px;
   color: #fff;
   position: relative;
 }
 
-@media screen and (max-width:900px) {
-  .page {
-    max-width: 800px;
-    margin: 45px 19px 60px 19px;
-  }
-}
 
-@media screen and (max-width:619px) {
-  .page {
-    max-width: 400px;
-    margin: 26px auto 36px auto;
-  }
-}
+
 
 @media screen and (max-width:410px) {
   .page {
-    margin-left: 19px;
-    margin-right: 19px;
+    margin-top: 28px;
+    margin-bottom: 36px;
   }
 }

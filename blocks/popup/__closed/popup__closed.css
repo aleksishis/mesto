@@ -7,8 +7,8 @@
   background-color: transparent;
   border: none;
   position: absolute;
-  right: -72px;
-  top: -102px;
+  right: -37px;
+  top: -45px;
 }
 
 .popup__closed:hover {
@@ -20,7 +20,7 @@
   .popup__closed {
     width: 20px;
     height: 20px;
-    right: -22px;
-    top: -118px;
+    right: 0px;
+    top: -38px;
   }
 }

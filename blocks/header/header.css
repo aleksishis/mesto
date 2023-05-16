@@ -1,5 +1,5 @@
 .header {
-  height: 74px;
+  min-height: 74px;
   position: relative;
 }
 
@@ -12,4 +12,10 @@
   bottom: 0;
   background-color: #545454;
   opacity: 0.7;
+}
+
+@media screen and (max-width:320px) {
+  .header {
+    min-height: 56px;
+  }
 }

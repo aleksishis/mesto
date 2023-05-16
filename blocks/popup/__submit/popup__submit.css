@@ -5,9 +5,13 @@
   background-repeat: no-repeat;
   background-color: black;
   margin-top: 48px;
+  border-radius: 2px;
+  border: 0;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .popup__submit:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.8;
 }

@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href='./vendor/normalize.css'>
-  <link rel="stylesheet" type="text/css" href='./styles.css'>
   <link rel="stylesheet" type="text/css" href='./pages/index.css'>
 
 
@@ -23,56 +21,54 @@
       <div class="profile__info">
         <div class="profile__about">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <p class="profile__depiction">Исследователь океана</p>
+          <button type="button" class="profile__edit"></button>
+          <p class="profile__description">Исследователь океана</p>
         </div>
-        <button type="button" class="profile__edit"></button>
 
       </div>
       <button type="button" class="profile__add"></button>
     </section>
     <section class="cards">
-
-
       <div class="cards__card card">
         <img src="./images/до.jpg" alt="Карачаевскя" class="card__photo">
         <div class="card__conteiner">
           <h2 class="card__tite">Карачаевск</h2>
-          <div class="card__heart"></div>
+          <button button type="button" class="card__heart"></button>
         </div>
       </div>
       <div class="cards__card card">
         <img src="./images/гораэльбрус.jpg" alt="Гора Эльбрус" class="card__photo">
         <div class="card__conteiner">
           <h2 class="card__tite">Гора Эльбрус</h2>
-          <div class="card__heart"></div>
+          <button type="button" class="card__heart"></button>
         </div>
       </div>
       <div class="cards__card card">
         <img src="./images/domb.jpg" alt="Домбай" class="card__photo">
         <div class="card__conteiner">
           <h2 class="card__tite">Домбай</h2>
-          <div class="card__heart"></div>
+          <button type="button" class="card__heart"></button>
         </div>
       </div>
       <div class="cards__card card">
         <img src="./images/гораэльбрус.jpg" alt="Гора Эльбрус" class="card__photo">
         <div class="card__conteiner">
           <h2 class="card__tite">Гора эльбрус</h2>
-          <div class="card__heart"></div>
+          <button type="button" class="card__heart"></button>
         </div>
       </div>
       <div class="cards__card card">
         <img src="./images/domb.jpg" alt="Домбай" class="card__photo">
         <div class="card__conteiner">
           <h2 class="card__tite">Домбай</h2>
-          <div class="card__heart"></div>
+          <button type="button" class="card__heart"></button>
         </div>
       </div>
       <div class="cards__card card">
         <img src="./images/до.jpg" alt="Карачаево-Ч..." class="card__photo">
         <div class="card__conteiner">
-          <h2 class="card__tite">Карачаево-Ч...</h2>
-          <div class="card__heart"></div>
+          <h2 class="card__tite">Карачаево-Черкессия</h2>
+          <button type="button" class="card__heart"></button>
         </div>
       </div>
     </section>
@@ -80,18 +76,17 @@
   <footer class="footer">
     <p class="footer__copyright">© 2020 Mesto Russia</p>
   </footer>
-  <section class="popup">
+  <div class="popup">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form action="#" class="popup__form">
-        <input type="text" class="popup__input">
-        <textarea class="popup__textarea">Исследователь океана</textarea>
+      <form name="edit-form" action="#" class="popup__form">
+        <input name="name" type="text" class="popup__input">
+        <input name="description" class="popup__input_description popup__input ">
         <button type="submit" class="popup__submit">Сохранить</button>
-        <button class="popup__closed"></button>
       </form>
+      <button type="button" class="popup__closed"></button>
     </div>
-
-  </section>
+  </div>
   <script type="text/javascript" src="./js/js.js "></script>
 </body>
 

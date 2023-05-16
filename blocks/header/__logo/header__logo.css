@@ -3,4 +3,19 @@
   background-repeat: no-repeat;
   height: 33px;
   background-size: contain;
+
+}
+
+@media screen and (max-width:896px) {
+  .header__logo {
+    margin-left: 27px;
+
+  }
+}
+
+@media screen and (max-width:320px) {
+  .header__logo {
+    width: 103.74px;
+    height: 24.4px;
+  }
 }

@@ -17,14 +17,6 @@
 
 @font-face {
   src:
-    url('./Inter-Bold.ttf');
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  src:
     url('./Inter-Black.ttf');
   font-family: 'Inter';
   font-style: normal;

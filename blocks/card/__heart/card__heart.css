@@ -4,11 +4,13 @@
   background-image: url(../../../images/heart.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
 }
 
 .card__heart:hover {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .card__heart:active {
