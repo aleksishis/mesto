@@ -1,5 +1,5 @@
 .profile__name {
-  display: inline;
+  display: inline-block;
   margin: 0;
   font-weight: 500;
   font-size: 42px;
@@ -8,7 +8,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 294px;
+
+  /*height: 39px;*/
+  max-width: 380px;
 }
 
 @media screen and (max-width:900px) {
@@ -18,3 +20,27 @@
     margin-right: 10px;
   }
 }
+
+@media screen and (max-width:320px) {
+  .profile__name {
+    width: 232px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .profile__name {
+    margin-right: 56px;
+  }
+}
+
+@media screen and (max-width:460px) {
+  .profile__name {
+    width: 85%;
+  }
+}
+
+/*@media screen and (max-width:480px) {
+  .profile__name {
+    margin-right: 0px;
+  }
+}*/

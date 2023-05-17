@@ -2,6 +2,10 @@
   width: 24px;
   height: 24px;
 
+  position: absolute;
+  top: 12px;
+  right: 0px;
+
   background-image: url(../../../images/edit.svg);
   border: 1px solid #fff;
   background-repeat: no-repeat;
@@ -14,10 +18,19 @@
   opacity: 0.6;
 }
 
+@media screen and (max-width:900px) {
+
+  .profile__edit {
+    top: 8px;
+  }
+}
+
 @media screen and (max-width:768px) {
 
   .profile__edit {
     width: 18px;
     height: 18px;
+    top: 34px;
+    right: 29px;
   }
 }
