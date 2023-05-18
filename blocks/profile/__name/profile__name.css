@@ -13,25 +13,16 @@
 
 }
 
-/*@media screen and (max-width:900px) {
+@media screen and (min-width:769px) {
   .profile__name {
-    /*font-size: 27px;
-    line-height: 33px;*/
-/*margin-right: 10px;*/
-
-
+    min-width: 300px;
+  }
+}
 
 @media screen and (max-width:768px) {
   .profile__name {
     font-size: 27px;
     line-height: 33px;
-    /*margin-right: 56px;*/
-  }
-}
-
-@media screen and (min-width:769px) {
-  .profile__name {
-    min-width: 300px;
   }
 }
 
