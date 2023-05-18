@@ -8,39 +8,42 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 85%;
+  vertical-align: middle;
 
-  /*height: 39px;*/
-  max-width: 380px;
 }
 
-@media screen and (max-width:900px) {
+/*@media screen and (max-width:900px) {
   .profile__name {
-    font-size: 27px;
-    line-height: 33px;
-    margin-right: 10px;
-  }
-}
+    /*font-size: 27px;
+    line-height: 33px;*/
+/*margin-right: 10px;*/
 
-@media screen and (max-width:320px) {
-  .profile__name {
-    width: 232px;
-  }
-}
+
 
 @media screen and (max-width:768px) {
   .profile__name {
-    margin-right: 56px;
+    font-size: 27px;
+    line-height: 33px;
+    /*margin-right: 56px;*/
+  }
+}
+
+@media screen and (min-width:769px) {
+  .profile__name {
+    min-width: 300px;
   }
 }
 
 @media screen and (max-width:460px) {
   .profile__name {
-    width: 85%;
+    /*width: 85%;*/
   }
 }
 
-/*@media screen and (max-width:480px) {
+@media screen and (max-width:320px) {
   .profile__name {
-    margin-right: 0px;
+    width: 190px;
+    margin-right: 10px;
   }
-}*/
+}

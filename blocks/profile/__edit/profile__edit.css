@@ -2,9 +2,7 @@
   width: 24px;
   height: 24px;
 
-  position: absolute;
-  top: 12px;
-  right: 0px;
+  vertical-align: middle;
 
   background-image: url(../../../images/edit.svg);
   border: 1px solid #fff;

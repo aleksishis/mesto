@@ -1,4 +1,16 @@
 .profile__info {
   display: flex;
-  max-width: 450px;
+  max-width: 425px;
+}
+
+@media screen and (max-width:540px) {
+  .profile__info {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .profile__info {
+    max-width: 282px;
+  }
 }

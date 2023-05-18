@@ -19,27 +19,23 @@
   }
 }
 
+@media screen and (max-width:460px) {
+  .profile__description {
+    /*width: 85%;*/
+  }
+}
+
 @media screen and (max-width:768px) {
 
   .profile__description {
     max-width: 636px;
+    /*margin-right: 56px;*/
   }
 }
 
 @media screen and (max-width:320px) {
   .profile__description {
-    width: 232px;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .profile__description {
-    margin-right: 56px;
-  }
-}
-
-@media screen and (max-width:460px) {
-  .profile__description {
-    width: 85%;
+    width: 282px;
+    padding-top: 14px;
   }
 }
