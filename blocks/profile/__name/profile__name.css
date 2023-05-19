@@ -13,6 +13,7 @@
 
 }
 
+/* тут min-width:769px, а не max-width:769px :)))) */
 @media screen and (min-width:769px) {
   .profile__name {
     min-width: 300px;
@@ -23,12 +24,6 @@
   .profile__name {
     font-size: 27px;
     line-height: 33px;
-  }
-}
-
-@media screen and (max-width:460px) {
-  .profile__name {
-    /*width: 85%;*/
   }
 }
 
