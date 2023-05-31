@@ -5,9 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href='./pages/index.css'>
-
-
-
   <title>Mesto</title>
 </head>
 
@@ -29,48 +26,7 @@
       <button type="button" class="profile__add"></button>
     </section>
     <section class="cards">
-      <div class="cards__card card">
-        <img src="./images/до.jpg" alt="Карачаевскя" class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Карачаевск</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
-      <div class="cards__card card">
-        <img src="./images/гораэльбрус.jpg" alt="Гора Эльбрус" class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Гора Эльбрус</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
-      <div class="cards__card card">
-        <img src="./images/domb.jpg" alt="Домбай" class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Домбай</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
-      <div class="cards__card card">
-        <img src="./images/гораэльбрус.jpg" alt="Гора Эльбрус" class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Гора эльбрус</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
-      <div class="cards__card card">
-        <img src="./images/domb.jpg" alt="Домбай" class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Домбай</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
-      <div class="cards__card card">
-        <img src="./images/до.jpg" alt="Карачаево-Ч..." class="card__photo">
-        <div class="card__conteiner">
-          <h2 class="card__tite">Карачаево-Черкессия</h2>
-          <button type="button" class="card__heart"></button>
-        </div>
-      </div>
+
     </section>
   </main>
   <footer class="footer">
@@ -87,7 +43,38 @@
       <button type="button" class="popup__closed"></button>
     </div>
   </div>
-  <script type="text/javascript" src="./js/js.js "></script>
+  <div class="popup popupAddCard">
+    <div class="popup__container popupAddCard__container">
+      <h3 class="popup__title popupAddCard__title">Новое место</h3>
+      <form name="add-form" action="#" class="popup__form popupAddCard__form">
+        <input placeholder="Название" name="name" type="text"
+          class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_title">
+        <input placeholder="Ссылка на картинку" name="url"
+          class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url">
+        <button type="submit" class="popup__submit popupAddCard__submit">Сохранить</button>
+      </form>
+      <button type="button" class="popup__closed popupAddCard__closed"></button>
+    </div>
+  </div>
+  <div class=" popup popupImage">
+    <div class="popupImage__container">
+      <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg"
+        class="popupImage__image" alt="картинка">
+      <h2 class="popupImage__title">Горный Алтай</h2>
+      <button type="button" class="popupImage__closed"></button>
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/js.js" defer></script>
+  <template class="card__template">
+    <div class="cards__card card">
+      <button class="card__delete" src="./images/backet.svg" alt="корзина"></button>
+      <img src="./images/до.jpg" alt="Карачаевск" class="card__photo">
+      <div class="card__conteiner">
+        <h2 class="card__tite">Карачаевск</h2>
+        <button type="button" class="card__heart"></button>
+      </div>
+    </div>
+  </template>
 </body>
 
 </html>

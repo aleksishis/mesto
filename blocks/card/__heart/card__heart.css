@@ -12,7 +12,3 @@
   cursor: pointer;
   opacity: 0.5;
 }
-
-.card__heart:active {
-  background-image: url(../../../images/heart_active.svg);
-}
