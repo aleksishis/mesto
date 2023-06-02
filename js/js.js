@@ -2,7 +2,7 @@
 
 
 const profilePopup = document.querySelector(".popupProfile");
-const openPopupProfileBtn = document.querySelector(".popupProfile__openBtn");
+const openPopupProfileBtn = document.querySelector(".profile__edit");
 const closeProfileBtn = document.querySelector(".popupProfile__closed");;
 
 const closedPopupBtn = document.querySelector(".popup__closed");
