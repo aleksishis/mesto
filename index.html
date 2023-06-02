@@ -18,7 +18,7 @@
       <div class="profile__info">
         <div class="profile__about">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit"></button>
+          <button type="button" class="popupProfile__open profile__edit"></button>
           <p class="profile__description">Исследователь океана</p>
         </div>
 
@@ -32,7 +32,7 @@
   <footer class="footer">
     <p class="footer__copyright">© 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popupProfile">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
       <form name="edit-form" action="#" class="popup__form">
@@ -40,7 +40,7 @@
         <input name="description" class="popup__input popup__input_prompt_job">
         <button type="submit" class="popup__submit">Сохранить</button>
       </form>
-      <button type="button" class="popup__closed"></button>
+      <button type="button" class="popup__closed popupProfile__closed"></button>
     </div>
   </div>
   <div class="popup popupAddCard">
@@ -53,7 +53,7 @@
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url">
         <button type="submit" class="popup__submit popupAddCard__submit">Сохранить</button>
       </form>
-      <button type="button" class="popup__closed popupAddCard__closed"></button>
+      <button type="button" class="popupAddCard__closed popup__closed"></button>
     </div>
   </div>
   <div class=" popup popupImage">
@@ -61,7 +61,7 @@
       <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg"
         class="popupImage__image" alt="картинка">
       <h2 class="popupImage__title">Горный Алтай</h2>
-      <button type="button" class="popupImage__closed"></button>
+      <button type="button" class="popupImage__closed popup__closed"></button>
     </div>
   </div>
   <script type="text/javascript" src="./js/js.js" defer></script>
