@@ -113,8 +113,7 @@ function createCard(name, link) {
   photoCardEl.src = link;
   photoCardEl.alt = name; //alt картинки
   //  Работаю с иконкой сердца 
-  const likeHeart = newCard.querySelectorAll('.card__heart');
-  console.log(likeHeart)
+  const likeHeart = newCard.querySelectorAll('.card__heart'); //При querySelector все карты пропадают и не добавляются, даже document.querySelector('.card__heart')
   likeHeart.forEach(function (item) {
     item.addEventListener('click', function () {
       item.classList.toggle('card__heart_active');
