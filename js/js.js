@@ -5,9 +5,6 @@ const profilePopup = document.querySelector(".popupProfile");
 const openPopupProfileBtn = document.querySelector(".profile__edit");
 const closeProfileBtn = document.querySelector(".popupProfile__closed");;
 
-const closedPopupBtn = document.querySelector(".popup__closed");
-
-
 const profileName = document.querySelector(".profile__name");
 const nameInput = document.querySelector(".popup__input_prompt_name");
 
@@ -113,11 +110,9 @@ function createCard(name, link) {
   photoCardEl.src = link;
   photoCardEl.alt = name; //alt картинки
   //  Работаю с иконкой сердца 
-  const likeHeart = newCard.querySelectorAll('.card__heart'); //При querySelector все карты пропадают и не добавляются, даже document.querySelector('.card__heart')
-  likeHeart.forEach(function (item) {
-    item.addEventListener('click', function () {
-      item.classList.toggle('card__heart_active');
-    })
+  const likeHeart = newCard.querySelector(".card__heart");
+  likeHeart.addEventListener("click", function () {
+    likeHeart.classList.toggle("card__heart_active");
   });
   //  Удаление картчоки 
   const deleteButton = newCard.querySelector('.card__delete');
