@@ -17,9 +17,14 @@ const hideInputError = (formElement, inputElement) => {
   errorElement.classList.remove('popup__error_visible');
   errorElement.textContent = '';
 };
+
+//проверяет inputElement на корректность введённых данных и вызывает showInputError и hideInputError.
 const checkInputValidity = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
+    // inputElement.validationMessage - возвращает строку, 
+    //представляющую локализованное сообщение, описывающее ограничения проверки, 
+    //которым элемент управления не удовлетворяет (если таковые имеются).
   } else {
     hideInputError(formElement, inputElement);
   }

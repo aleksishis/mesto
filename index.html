@@ -51,10 +51,10 @@
     <div class="popup__container popupAddCard__container">
       <h3 class="popup__title popupAddCard__title">Новое место</h3>
       <form name="add-form" action="#" class="popup__form popupAddCard__form" novalidate>
-        <input minlength="2" maxlength="40" placeholder="Название" name="name" type="text"
+        <input minlength="2" maxlength="40" id="title-input" type="text" name="name" placeholder="Название"
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_title">
-        <input minlength="2" maxlength="40" placeholder="Ссылка на картинку" name="url"
-          class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url" type="url">
+        <input minlength="2" maxlength="40" id="title-url" type="url" name="url" placeholder="Ссылка на картинку"
+          class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url">
         <button type="submit" class="popup__submit popupAddCard__submit popup__button">Сохранить</button>
       </form>
       <button type="button" class="popupAddCard__closed popup__closed"></button>
