@@ -11,7 +11,6 @@
   justify-content: center;
 
 
-
   visibility: hidden;
   display: flex;
   opacity: 0;
@@ -20,8 +19,13 @@
 
 }
 
-.popup__error_visible {
+.popup__input-error {
+  visibility: hidden;
   font-size: 12px;
   line-height: 15px;
   color: #FF0000;
+}
+
+.popup__error_visible {
+  visibility: visible;
 }
