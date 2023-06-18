@@ -1,3 +1,8 @@
+// не работает валидаци, из инпута отправляется любая информация   
+
+// Есть ошибка, появляется когда ввожу символ в инпуте : Cannot set properties of null (setting 'textContent')
+
+
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add('popup__input_type_error');
