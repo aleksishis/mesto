@@ -4,11 +4,12 @@
   color: white;
   background-repeat: no-repeat;
   background-color: black;
-  margin-top: 48px;
+  margin-top: 31px;
   border-radius: 2px;
   border: 0;
   font-size: 18px;
   line-height: 22px;
+
 }
 
 .popup__submit:hover {
@@ -21,4 +22,13 @@
     font-size: 14px;
     line-height: 17px;
   }
+}
+
+.popup__button_disabled {
+  background: #C4C4C4;
+}
+
+.popup__button_disabled:hover {
+  cursor: pointer;
+  opacity: 1;
 }

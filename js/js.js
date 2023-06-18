@@ -68,10 +68,11 @@ closeButtons.forEach((button) => {
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
-  enableValidation()
+  isValid()
 }
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  isValid()
 }
 
 openPopupProfileBtn.addEventListener('click', function () {
