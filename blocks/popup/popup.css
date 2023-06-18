@@ -19,3 +19,9 @@
   /*transition-delay: 0.5s, 0.5s;*/
 
 }
+
+.popup__error_visible {
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+}
