@@ -35,10 +35,14 @@
   <div class="popup popupProfile">
     <div class="popup__container">
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form name="edit-form" action="#" class="popup__form">
-        <input name="name" type="text" class="popup__input popup__input_prompt_name">
-        <input name="description" class="popup__input popup__input_prompt_job">
-        <button type="submit" class="popup__submit">Сохранить</button>
+      <form name="edit-form" action="#" class="popup__form popupProfile__form" novalidate>
+        <input minlength="2" maxlength="40" name="name" type="text" class="popup__input popup__input_prompt_name"
+          id="name-input" required>
+        <span class="popup__input-error name-input_error"></span>
+        <input minlength="2" maxlength="40" name="description" class=" popup__input popup__input_prompt_job"
+          id="job-input" required>
+        <span class="popup__input-error job-input_error"></span>
+        <button type="submit" class="popup__submit popup__button">Сохранить</button>
       </form>
       <button type="button" class="popup__closed popupProfile__closed"></button>
     </div>
@@ -46,12 +50,12 @@
   <div class="popup popupAddCard">
     <div class="popup__container popupAddCard__container">
       <h3 class="popup__title popupAddCard__title">Новое место</h3>
-      <form name="add-form" action="#" class="popup__form popupAddCard__form">
+      <form name="add-form" action="#" class="popup__form popupAddCard__form" novalidate>
         <input placeholder="Название" name="name" type="text"
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_title">
         <input placeholder="Ссылка на картинку" name="url"
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url">
-        <button type="submit" class="popup__submit popupAddCard__submit">Сохранить</button>
+        <button type="submit" class="popup__submit popupAddCard__submit popup__button">Сохранить</button>
       </form>
       <button type="button" class="popupAddCard__closed popup__closed"></button>
     </div>
