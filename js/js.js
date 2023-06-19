@@ -72,13 +72,15 @@ function openPopup(popup) {
 }
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  isValid()
+
 }
 
 openPopupProfileBtn.addEventListener('click', function () {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
   openPopup(profilePopup);
+  closePopupOnEscClick(profilePopup);
+
 })
 
 editForm.addEventListener('submit', function (event) {
@@ -91,6 +93,8 @@ editForm.addEventListener('submit', function (event) {
 
 openpopupAddCard.addEventListener('click', function () {
   openPopup(popupAddCard);
+
+  closePopupOnEscClick(popupAddCard);
 });
 
 initialCards.forEach(function (item) {
@@ -126,6 +130,9 @@ function createCard(name, link) {
     imgPopupImageEL.alt = photoCardEl.alt;
     textPopupImageEL.textContent = textCardEl.textContent;
 
+    // Закрытие ПОПАПА С КАРТИНКОЙ
+    closePopupOnEscClick(popupImageEL)
+
   })
   return newCard;
 }
@@ -148,3 +155,33 @@ formPopupAddCardEl.addEventListener('submit', function (event) {
   closePopup(popupAddCard);
 }
 )
+
+
+// Закрытие модального - Клик на ESC
+const closePopupOnEscClick = (popup) => {
+  document.addEventListener('keydown', (evt) => {
+    if (evt.code === "Escape") {
+      closePopup(popup);
+    }
+  })
+}
+
+// Закрытие модального - Клик по OVERLAY
+//const closePopupOnOverlayClick = () => {
+//  const popup = document.querySelector('.popup');
+
+//  document.addEventListener('click', (e) => {
+//    const withinBoundaries = e.composedPath().includes(popup);
+//    if (!withinBoundaries) {
+//      closePopup(popup)
+//    }
+//  })}
+
+const closePopupOnOverlayClick = (popup) => {
+  document.addEventListener('click', function (event) {
+    const pop = document.querySelector('.popup')
+    if (!pop.contains(event.target)) { closePopup(popup) }
+
+
+  });
+}
