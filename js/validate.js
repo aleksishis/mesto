@@ -1,4 +1,4 @@
-const enableValidation = {
+const listClass = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
@@ -10,16 +10,16 @@ const enableValidation = {
 
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.add(enableValidation.inputErrorClass);
+  inputElement.classList.add(listClass.inputErrorClass);
   errorElement.textContent = errorMessage;
-  errorElement.classList.add(enableValidation.errorClass);
+  errorElement.classList.add(listClass.errorClass);
 
 };
 
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.remove(enableValidation.inputErrorClass);
-  errorElement.classList.remove(enableValidation.errorClass);
+  inputElement.classList.remove(listClass.inputErrorClass);
+  errorElement.classList.remove(listClass.errorClass);
   errorElement.textContent = '';
 };
 
@@ -46,19 +46,19 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(enableValidation.inactiveButtonClass);
+    buttonElement.classList.add(listClass.inactiveButtonClass);
     buttonElement.setAttribute('disabled', '');
   } else {
-    buttonElement.classList.remove(enableValidation.inactiveButtonClass);
+    buttonElement.classList.remove(listClass.inactiveButtonClass);
     buttonElement.removeAttribute('disabled',)
   }
 };
 
 
 const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(enableValidation.inputSelector));
+  const inputList = Array.from(formElement.querySelectorAll(listClass.inputSelector));
 
-  const buttonElement = formElement.querySelector(enableValidation.submitButtonSelector)
+  const buttonElement = formElement.querySelector(listClass.submitButtonSelector)
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', function () {
@@ -71,8 +71,8 @@ const setEventListeners = (formElement) => {
 };
 
 validateForm = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(enableValidation.inputSelector));
-  const buttonElement = formElement.querySelector(enableValidation.submitButtonSelector)
+  const inputList = Array.from(formElement.querySelectorAll(listClass.inputSelector));
+  const buttonElement = formElement.querySelector(listClass.submitButtonSelector)
 
   inputList.forEach((inputElement) => {
     checkInputValidity(formElement, inputElement);
@@ -81,7 +81,7 @@ validateForm = (formElement) => {
 };
 
 const isValid = () => {
-  const formList = Array.from(document.querySelectorAll(enableValidation.formSelector));
+  const formList = Array.from(document.querySelectorAll(listClass.formSelector));
   formList.forEach((formElement) => {
     formElement.addEventListener('submit', function (evt) {
       evt.preventDefault();
