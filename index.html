@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href='./pages/index.css'>
   <title>Mesto</title>
+  <script type="text/javascript" src="./js/js.js" defer></script>
+  <script type="text/javascript" src="./js/validate.js" defer></script>
+
 </head>
 
 <body class="page">
@@ -39,7 +42,7 @@
         <input minlength="2" maxlength="40" name="name" type="text" class="popup__input popup__input_prompt_name"
           id="name-input" required>
         <span class="popup__input-error name-input-error"></span>
-        <input minlength="2" maxlength="40" name="description" class=" popup__input popup__input_prompt_job"
+        <input minlength="2" maxlength="200" name="description" class=" popup__input popup__input_prompt_job"
           id="job-input" required>
         <span class="popup__input-error job-input-error"></span>
         <button type="submit" class="popup__submit popup__button">Сохранить</button>
@@ -51,13 +54,13 @@
     <div class="popup__container popupAddCard__container">
       <h3 class="popup__title popupAddCard__title">Новое место</h3>
       <form name="add-form" action="#" class="popup__form popupAddCard__form" novalidate>
-        <input minlength="2" maxlength="40" id="title-input" type="text" name="name" placeholder="Название"
+        <input minlength="2" maxlength="30" id="title-input" type="text" name="name" placeholder="Название" required
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_title">
         <span class="popup__input-error title-input-error"></span>
-        <input minlength="2" maxlength="40" id="title-url" type="url" name="url" placeholder="Ссылка на картинку"
+        <input id="title-url" type="url" name="url" placeholder="Ссылка на картинку" required
           class="popup__input popupAddCard__input popupAddCard__input popupAddCard__input_prompt_url">
         <span class="popup__input-error title-url-error"></span>
-        <button type="submit" class="popup__submit popupAddCard__submit popup__button">Сохранить</button>
+        <button disabled type="submit" class="popup__submit popupAddCard__submit popup__button">Сохранить</button>
       </form>
       <button type="button" class="popupAddCard__closed popup__closed"></button>
     </div>
@@ -70,8 +73,8 @@
       <button type="button" class="popupImage__closed popup__closed"></button>
     </div>
   </div>
-  <script type="text/javascript" src="./js/js.js" defer></script>
-  <script type="text/javascript" src="./js/validate.js" defer></script>
+
+
 
   <template class="card__template">
     <div class="cards__card card">
