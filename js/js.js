@@ -60,18 +60,19 @@ closeButtons.forEach((button) => {
   // находим 1 раз ближайший к крестику попап 
   const popup = button.closest('.popup');
   // устанавливаем обработчик закрытия на крестик
-  button.addEventListener('click', () => closePopup());
+  button.addEventListener('click', () => closePopup(popup));
 });
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
-  closePopupOnEscClick();
-  closePopupOnOverlayClick();
+  document.addEventListener('keydown', keyDownHandler);
+  document.addEventListener('click', documentClickHandler);
 }
 
 const keyDownHandler = (event) => {
   if (event.code === "Escape") {
-    closePopup();
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
   }
 }
 
@@ -82,24 +83,17 @@ const documentClickHandler = ({ target }) => {
     return;
   };
 
-  const isOutsideClick = target.contains(openedPopup);
+  const isOutsideClick = target.classList.contains('popup_opened')
 
   if (isOutsideClick) {
-    closePopup();
+    closePopup(openedPopup);
   }
 }
 
-function closePopup() {
-  const openedPopup = document.querySelector('.popup_opened');
-
-  if (!openedPopup) {
-    return;
-  };
-
-  openedPopup.classList.remove("popup_opened");
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
   document.removeEventListener('keydown', keyDownHandler);
   document.removeEventListener('click', documentClickHandler);
-
 }
 
 openPopupProfileBtn.addEventListener('click', function () {
@@ -107,7 +101,7 @@ openPopupProfileBtn.addEventListener('click', function () {
   jobInput.value = profileJob.textContent;
   openPopup(profilePopup);
 
-  validateForm(editForm);
+  validateForm(editForm, listClass);
 })
 
 editForm.addEventListener('submit', function (event) {
@@ -115,7 +109,7 @@ editForm.addEventListener('submit', function (event) {
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
   //закрываю попап изменения профиля 
-  closePopup();
+  closePopup(profilePopup);
 })
 
 openpopupAddCard.addEventListener('click', function () {
@@ -163,6 +157,7 @@ formPopupAddCardEl.addEventListener('submit', function (event) {
 
 
   const form = event.target;
+  const popup = form.closest('.popup');
   const formData = new FormData(form);
   const values = Object.fromEntries(formData);
 
@@ -173,15 +168,6 @@ formPopupAddCardEl.addEventListener('submit', function (event) {
   cardsItemsEl.prepend(newCard)
 
   form.reset()
-  closePopup();
+  closePopup(popup);
 }
 )
-
-// Закрытие модального - Клик на ESC 
-const closePopupOnEscClick = () => {
-  document.addEventListener('keydown', keyDownHandler);
-}
-
-function closePopupOnOverlayClick(formElement) {
-  document.addEventListener('click', documentClickHandler)
-}
