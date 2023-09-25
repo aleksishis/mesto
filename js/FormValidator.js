@@ -11,6 +11,11 @@ export default class FormValidator {
     this._setEvenetListeners();
   }
 
+  disableButtonState() {
+    this._buttonElement.classList.add(this._options.inactiveButtonClass);
+    this._buttonElement.setAttribute('disabled', '');
+  }
+
   _hasError() {
     return this._inputList.some((inputElement) => {
       // Если поле не валидно, колбэк вернёт true

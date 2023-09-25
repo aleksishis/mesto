@@ -18,9 +18,20 @@ const openpopupAddCard = document.querySelector(".profile__add");
 
 const cardsItemsEl = document.querySelector('.cards'); // СЮДА ДОБАВЛЯЮТСЯ КАРТОЧКИ
 const formPopupAddCardEl = document.querySelector('.popupAddCard__form');// ФОРМА ПОАПА
+const openPopupSelector = document.querySelector('.popupImage');
+const popupImageSelector = document.querySelector('.popupImage__image');
+const popupTextSelector = document.querySelector('.popupImage__title');
 
+const popUpSelectors = {
+  popup: openPopupSelector,
+  popupText: popupTextSelector,
+  popupImage: popupImageSelector
+}
 
 const popupList = document.querySelectorAll('.popup__form');
+
+
+const popupListSelectors = document.querySelectorAll('.popup__form');
 
 const initialCards = [
   {
@@ -50,10 +61,16 @@ const initialCards = [
 ];
 
 
-popupList.forEach(form => {
-  const validation = new FormValidator(form, listClass);
-  validation.startValidation();
-});
+//popupList.forEach(form => {
+//  const validation = new FormValidator(form, listClass);
+//  validation.startValidation();
+//});
+
+const editPopUpValidation = new FormValidator(editForm, listClass)
+editPopUpValidation.startValidation();
+
+const createCardValidation = new FormValidator(formPopupAddCardEl, listClass)
+createCardValidation.startValidation();
 
 const closeButtons = document.querySelectorAll('.popup__closed');
 closeButtons.forEach((button) => {
@@ -68,6 +85,7 @@ function openPopup(popup) {
   document.addEventListener('keydown', keyDownHandler);
   document.addEventListener('click', documentClickHandler);
 }
+
 
 const keyDownHandler = (event) => {
   if (event.code === "Escape") {
@@ -90,7 +108,16 @@ const documentClickHandler = ({ target }) => {
   }
 }
 
+function createNewCard(name, link) {
+  const card = new Card({ name, link }, '.card__template', openPopup, popUpSelectors);
+  const newCard = card.createCard();
+
+  return newCard;
+}
+
 function closePopup(popup) {
+  editPopUpValidation.disableButtonState();
+  createCardValidation.disableButtonState();
   popup.classList.remove("popup_opened");
   document.removeEventListener('keydown', keyDownHandler);
   document.removeEventListener('click', documentClickHandler);
@@ -107,6 +134,8 @@ editForm.addEventListener('submit', function (event) {
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
   //закрываю попап изменения профиля
+
+
   closePopup(profilePopup);
 })
 
@@ -116,9 +145,7 @@ openpopupAddCard.addEventListener('click', function () {
 
 
 initialCards.forEach(function (item) {
-  //const newCard = createCard(item.name, item.link);
-  const card = new Card({ name: item.name, link: item.link }, '.card__template', openPopup);
-  const newCard = card.createCard();
+  const newCard = createNewCard(item.name, item.link)
   cardsItemsEl.prepend(newCard);
 
 });
@@ -136,8 +163,7 @@ formPopupAddCardEl.addEventListener('submit', function (event) {
   const valueName = values['name'];
   const valueUrl = values['url'];
 
-  const card = new Card({ name: valueName, link: valueUrl }, '.card__template', openPopup);
-  const newCard = card.createCard();
+  const newCard = createNewCard(valueName, valueUrl)
 
   cardsItemsEl.prepend(newCard)
 
