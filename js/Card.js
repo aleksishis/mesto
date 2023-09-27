@@ -47,6 +47,7 @@ export default class Card {
     this._card.querySelector(".card__tite").textContent = this._name;
 
     return this._card;
+
   }
 
   _setEventListeners() {
@@ -58,6 +59,5 @@ export default class Card {
       this._handleCardClick()
     })
   }
-
 
 }
