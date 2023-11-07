@@ -28,10 +28,7 @@ export default class Card {
   }
 
   _handleCardClick() {
-    this._openPopup(this._popupSelectorsList.popup);
-    this._popupImageEL.src = this._url;
-    this._popupImageEL.alt = this._name;
-    this._popupTextEL.textContent = this._name;
+    this._openPopup.openPopup(this._url, this._name);
   }
 
 
@@ -57,6 +54,7 @@ export default class Card {
 
     this._cardImage.addEventListener('click', () => {
       this._handleCardClick()
+
     })
   }
 
